@@ -18,13 +18,9 @@ public class Main {
 
     ArrayList<Integer> arr = new ArrayList<>(list);
 
-//  Create a new MergeSort object
-
-    MergeSort ms = new MergeSort();
-
 //  Sort the elements of the array
 
-    ms.sort(arr);
+    MergeSort.sort(arr);
 
 //  Print the result to console
 

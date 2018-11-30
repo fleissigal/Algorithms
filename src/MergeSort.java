@@ -5,10 +5,10 @@ import java.util.List;
  * Created by GalFleissig on 30/11/2018.
  */
 
-public class MergeSort implements SortingAlgorithm {
+class MergeSort implements SortingAlgorithm {
 
 
-    public static void sort(ArrayList<Integer> arr) {
+    static void sort(ArrayList<Integer> arr) {
 
         // Checking for the base cases
         if (arr.size() == 1) {
