@@ -24,7 +24,7 @@ class MergeSort implements SortingAlgorithm {
         int middle = arr.size() / 2;
 
         ArrayList<Integer> firstHalf = new ArrayList<>(arr.subList(0, middle));
-        ArrayList<Integer> secondHalf = new ArrayList<>(arr.subList(middle, arr.size() - 1));
+        ArrayList<Integer> secondHalf = new ArrayList<>(arr.subList(middle, arr.size()));
 
         // The recursive calls
 
@@ -37,7 +37,7 @@ class MergeSort implements SortingAlgorithm {
         int firstIndex = 0;
         int secondIndex = 0;
 
-        while ((firstIndex < firstHalf.size() - 1) && (secondIndex < secondHalf.size() - 1)) {
+        while ((firstIndex < firstHalf.size()) && (secondIndex < secondHalf.size())) {
 
             int firstInt = firstHalf.get(firstIndex);
             int secondInt = secondHalf.get(secondIndex);
@@ -51,7 +51,7 @@ class MergeSort implements SortingAlgorithm {
             }
         }
 
-        if (firstIndex == firstHalf.size() - 1) {
+        if (firstIndex == firstHalf.size()) {
 //            Populate the rest from secondHalf
             for (int i = secondIndex; i < secondHalf.size(); i++) {
                 list.add(secondHalf.get(i));
