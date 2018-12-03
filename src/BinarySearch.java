@@ -7,7 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 class BinarySearch implements SearchingAlgorithm {
 
-
+    @Override
     public int find(ArrayList<Integer> arr, int n) {
 
         return find_aux(arr, n, 0, arr.size() - 1);
