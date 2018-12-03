@@ -31,13 +31,14 @@ public class Main {
     list.add(9);
 
     ArrayList<Integer> arr = new ArrayList<>(list);
+    System.out.print(arr.toString() + "\n");
 
-//  Sort the elements of the array
+//    System.out.print("MergeSort\n");
+//    MergeSort.sort(arr);
+//    System.out.print(arr.toString());
 
-    MergeSort.sort(arr);
-
-//  Print the result to console
-
+    System.out.print("QuickSort:\n");
+    QuickSort.sort(arr);
     System.out.print(arr.toString());
 
     }
