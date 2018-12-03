@@ -5,9 +5,8 @@ import java.util.ArrayList;
  */
 public interface SortingAlgorithm {
 
-    static void sort(ArrayList<Integer> arr) {
+    //        Implementation of the sorting algorithm on the given array
+    void sort(ArrayList<Integer> arr);
 
-//        Implement the sorting algorithm on the given array
 
-    }
 }

@@ -8,7 +8,7 @@ import java.util.List;
 class MergeSort implements SortingAlgorithm {
 
 
-    static void sort(ArrayList<Integer> arr) {
+    public void sort(ArrayList<Integer> arr) {
 
         // Checking for the base cases
         if (arr.size() == 1) {

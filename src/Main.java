@@ -38,8 +38,15 @@ public class Main {
 //    System.out.print(arr.toString());
 
     System.out.print("QuickSort:\n");
-    QuickSort.sort(arr);
-    System.out.print(arr.toString());
+    QuickSort quick_sort = new QuickSort();
+    quick_sort.sort(arr);
+    System.out.print(arr.toString() + "\n");
+
+    int n = 10;
+    System.out.printf("BinarySearch: %d\n", n);
+    BinarySearch binary_search = new BinarySearch();
+    int result = binary_search.find(arr, n);
+    System.out.print(result);
 
     }
 }

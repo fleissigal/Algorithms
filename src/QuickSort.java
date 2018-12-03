@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 class QuickSort implements SortingAlgorithm {
 
 
-    static void sort(ArrayList<Integer> arr) {
+    public void sort(ArrayList<Integer> arr) {
 
 
         // Checking for the base cases
