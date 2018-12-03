@@ -1,6 +1,8 @@
 import com.sun.tools.javac.util.Pair;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Set;
 
 /**
  * Created by GalFleissig on 30/11/2018.
@@ -8,10 +10,13 @@ import java.util.ArrayList;
 
 class Graph {
 
-    ArrayList<Node> nodes;
-    ArrayList<Link> links;
+    Set<Node> nodes;
+    Set<Link> links;
 
-    Graph() {}
+    Graph() {
+        this.nodes = Collections.emptySet();
+        this.links = Collections.emptySet();
+    }
 
     public void add_node(Node node) {
         nodes.add(node);
