@@ -46,7 +46,42 @@ public class Main {
     System.out.printf("BinarySearch: %d\n", n);
     BinarySearch binary_search = new BinarySearch();
     int result = binary_search.find(arr, n);
-    System.out.print(result);
+    System.out.print(result + "\n");
+
+    n = 5;
+
+    Graph graph = new Graph();
+
+    Node a = new Node(1, 111);
+    Node b = new Node(2, 112);
+    Node c = new Node(3, 113);
+    Node d = new Node(4, 114);
+    Node e = new Node(5, 115);
+    Node f = new Node(6, 116);
+    Node g = new Node(7, 117);
+
+    graph.add_node(a);
+    graph.add_node(b);
+    graph.add_node(c);
+    graph.add_node(d);
+    graph.add_node(e);
+    graph.add_node(f);
+    graph.add_node(g);
+
+    a.addLinkedNode(b);
+    a.addLinkedNode(c);
+    a.addLinkedNode(d);
+    b.addLinkedNode(e);
+    c.addLinkedNode(f);
+    d.addLinkedNode(g);
+
+    BFS bfs = new BFS();
+    result = bfs.find(a, n);
+
+    System.out.printf("BFS: %d\n", n);
+
+    System.out.print(result + "\n");
 
     }
+
 }

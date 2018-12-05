@@ -14,14 +14,14 @@ class BFS implements SearchingAlgorithm {
     @Override
     public int find(Node root, int id) {
 
-        Set<Node> visited = Collections.emptySet();
+        Set<Integer> visited = new HashSet<>();
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
         return find_aux(root, id, visited, queue);
 
     }
 
-    public int find_aux(Node root, int id, Set<Node> visited, Queue<Node> queue) {
+    public int find_aux(Node root, int id, Set<Integer> visited, Queue<Node> queue) {
 
         // TODO: Check if visited is redundant
 
@@ -33,13 +33,13 @@ class BFS implements SearchingAlgorithm {
         if (queue.isEmpty()) return -1;
 
         // Add root's neighbours to the queue
-        visited.add(root);
+        visited.add(root.getId());
         queue.remove();
 
         Set<Node> neighbours = root.getLinkedNodes();
 
         for (Node n : neighbours) {
-            if (!visited.contains(n) && !queue.contains(n)) {
+            if (!visited.contains(n.getId()) && !queue.contains(n)) {
                 queue.add(n);
             }
         }

@@ -1,8 +1,5 @@
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by GalFleissig on 30/11/2018.
@@ -12,12 +9,12 @@ class Node {
 
     private int id;
     private int data;
-    private Set<Node> linkedNodes;
+    private Set<Node> neighbours;
 
     Node(int id, int data) {
         this.id = id;
         this.data = data;
-        this.linkedNodes = Collections.emptySet();
+        this.neighbours = new HashSet<>();
     }
 
     public int getId() {
@@ -29,11 +26,11 @@ class Node {
     }
 
     public Set<Node> getLinkedNodes() {
-        return linkedNodes;
+        return neighbours;
     }
 
     public void addLinkedNode(Node node) {
-        this.linkedNodes.add(node);
+        this.neighbours.add(node);
     }
 
 }

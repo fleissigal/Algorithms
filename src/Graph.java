@@ -2,6 +2,7 @@ import com.sun.tools.javac.util.Pair;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -11,18 +12,17 @@ import java.util.Set;
 class Graph {
 
     Set<Node> nodes;
-    Set<Link> links;
 
     Graph() {
-        this.nodes = Collections.emptySet();
-        this.links = Collections.emptySet();
+        this.nodes = new HashSet<>();
     }
 
     public void add_node(Node node) {
         nodes.add(node);
     }
 
-    public void add_link(Link link) {
-        this.links.add(link);
+    public void add_link(Node n1, Node n2) {
+        n1.addLinkedNode(n2);
+        n2.addLinkedNode(n1);
     }
 }
