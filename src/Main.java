@@ -77,11 +77,15 @@ public class Main {
 
     BFS bfs = new BFS();
     result = bfs.find(a, n);
-
     System.out.printf("BFS: %d\n", n);
-
     System.out.print(result + "\n");
 
+    n = 2;
+
+    DFS dfs = new DFS();
+    result = dfs.find(a, n);
+    System.out.printf("DFS: %d\n", n);
+    System.out.print(result + "\n");
     }
 
 }
