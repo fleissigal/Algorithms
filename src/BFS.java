@@ -17,36 +17,18 @@ class BFS implements SearchingAlgorithm {
         Set<Integer> visited = new HashSet<>();
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
-        return find_aux(root, id, visited, queue);
 
-    }
-
-    public int find_aux(Node root, int id, Set<Integer> visited, Queue<Node> queue) {
-
-        // TODO: Check if visited is redundant
-
-        // Checking the base case
-        if (root.getId() == id) {
-            return root.getData();
-        }
-
-        if (queue.isEmpty()) return -1;
-
-        // Add root's neighbours to the queue
-        visited.add(root.getId());
-        queue.remove();
-
-        Set<Node> neighbours = root.getLinkedNodes();
-
-        for (Node n : neighbours) {
-            if (!visited.contains(n.getId()) && !queue.contains(n)) {
-                queue.add(n);
+        while (!queue.isEmpty()) {
+            if (queue.peek().getId() == id) return queue.peek().getData();
+            Node curr = queue.remove();
+            visited.add(curr.getId());
+            for (Node n : curr.getLinkedNodes()) {
+                if (!visited.contains(n.getId()) && !queue.contains(n)) {
+                    queue.add(n);
+                }
             }
         }
-        return find_aux(queue.peek(), id, visited, queue);
+        return -1;
 
     }
-
-
-
 }

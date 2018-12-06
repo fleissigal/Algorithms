@@ -48,7 +48,7 @@ public class Main {
     int result = binary_search.find(arr, n);
     System.out.print(result + "\n");
 
-    n = 5;
+    n = 7;
 
     Graph graph = new Graph();
 
