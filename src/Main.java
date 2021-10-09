@@ -31,7 +31,7 @@ public class Main {
     list.add(9);
 
     ArrayList<Integer> arr = new ArrayList<>(list);
-    System.out.print(arr.toString() + "\n");
+    System.out.print(arr + "\n");
 
 //    System.out.print("MergeSort\n");
 //    MergeSort.sort(arr);
@@ -40,7 +40,7 @@ public class Main {
     System.out.print("QuickSort:\n");
     QuickSort quick_sort = new QuickSort();
     quick_sort.sort(arr);
-    System.out.print(arr.toString() + "\n");
+    System.out.print(arr + "\n");
 
     int n = 10;
     System.out.printf("BinarySearch: %d\n", n);
@@ -86,6 +86,39 @@ public class Main {
     result = dfs.find(a, n);
     System.out.printf("DFS: %d\n", n);
     System.out.print(result + "\n");
+
+
+    // Testing Binary Tree
+
+    BinaryTreeVertex root = new BinaryTreeVertex(1, 1);
+    BinaryTreeVertex second = new BinaryTreeVertex(2, 2);
+    BinaryTreeVertex third = new BinaryTreeVertex(3, 3);
+    BinaryTreeVertex fourth = new BinaryTreeVertex(4, 4);
+    BinaryTreeVertex fifth = new BinaryTreeVertex(5, 5);
+    BinaryTreeVertex sixth = new BinaryTreeVertex(6, 6);
+    BinaryTreeVertex seventh = new BinaryTreeVertex(7, 7);
+
+    BinaryTree tree = new BinaryTree(root);
+
+    root.setLeft(second);
+    root.setRight(third);
+
+    second.setLeft(fourth);
+    second.setRight(fifth);
+
+    third.setLeft(sixth);
+    third.setRight(seventh);
+
+    System.out.print("PreOrder:");
+    tree.preorderPrint(root);
+    System.out.print("\n");
+    System.out.print("InOrder:");
+    tree.inorderPrint(root);
+    System.out.print("\n");
+    System.out.print("PostOrder:");
+    tree.postPrint(root);
+    System.out.print("\n");
+
     }
 
 }
