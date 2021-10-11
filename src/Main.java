@@ -88,7 +88,7 @@ public class Main {
     System.out.print(result + "\n");
 
 
-    // Testing Binary Tree
+    // Testing Binary Tree and Orders
 
     BinaryTreeVertex root = new BinaryTreeVertex(1, 1);
     BinaryTreeVertex second = new BinaryTreeVertex(2, 2);
@@ -118,6 +118,62 @@ public class Main {
     System.out.print("PostOrder:");
     tree.postPrint(root);
     System.out.print("\n");
+
+    // Testing NewGraph and BFS and DFS
+
+        Vertex one = new Vertex(1, 1);
+        Vertex two = new Vertex(2, 2);
+        Vertex three = new Vertex(3, 3);
+        Vertex four = new Vertex(4, 4);
+        Vertex five = new Vertex(5, 5);
+        Vertex six = new Vertex(6, 6);
+        Vertex seven = new Vertex(7, 7);
+        Vertex eight = new Vertex(8, 8);
+        Vertex nine = new Vertex(9, 9);
+        Vertex ten = new Vertex(10, 10);
+
+        one.addNeighbor(four);
+        one.addNeighbor(six);
+
+        two.addNeighbor(ten);
+
+        three.addNeighbor(four);
+        three.addNeighbor(seven);
+        three.addNeighbor(nine);
+
+        four.addNeighbor(five);
+
+        five.addNeighbor(two);
+
+        six.addNeighbor(three);
+        six.addNeighbor(nine);
+
+        seven.addNeighbor(two);
+        seven.addNeighbor(eight);
+
+        ten.addNeighbor(eight);
+
+        NewGraph newGraph = new NewGraph();
+        newGraph.addVertex(one);
+        newGraph.addVertex(two);
+        newGraph.addVertex(three);
+        newGraph.addVertex(four);
+        newGraph.addVertex(five);
+        newGraph.addVertex(six);
+        newGraph.addVertex(seven);
+        newGraph.addVertex(eight);
+        newGraph.addVertex(nine);
+        newGraph.addVertex(ten);
+
+        System.out.print("Starting DFS:\n");
+        newGraph.findDFS(one,7);
+
+        System.out.print("\n");
+        System.out.print("\n");
+
+        System.out.print("Starting BFS:\n");
+        newGraph.findBFS(one,7);
+
 
     }
 

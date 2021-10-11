@@ -3,12 +3,10 @@ import java.util.HashSet;
 public class BinaryTree {
     private BinaryTreeVertex root;
     private HashSet<BinaryTreeVertex> vertices;
-    private HashSet<BinaryTreeEdge> edges;
 
     public BinaryTree(BinaryTreeVertex root) {
         this.root = root;
         this.vertices = new HashSet<>();
-        this.edges = new HashSet<>();
     }
 
     public BinaryTreeVertex getRoot() {
